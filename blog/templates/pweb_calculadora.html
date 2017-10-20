@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'blog/css/pweb_calculadora.css' %}">
+<script src="{% static 'blog/js/pweb_calculadora.js' %}"> type='text/javascript'</script>
+
+{% endblock head %}
+
+{%block body%}
+    {% include 'snipets/navbar.html' %}
+
+    
+    <div class="container">
+        <div class="card-panel blue darken-1 center-align"><h3>JQuery</h3></div>
+      <div class="row">
+        <div class="col s8 m6 l4 offset-l4 offset-m3 " >
+            <fieldset>
+                <legend> Calculadora JS</legend>
+          <table class="centered">
+
+                  <tr>
+                      <th  colspan="4"><input type="text" name="tf_input" id="tf_input" > </th>
+                  </tr>
+
+              <tbody>
+                  <tr>
+                      <td colspan="3"><a id="btn_c" class="btn red" href="#!">C</a></td>
+                      <td colspan="1"><a id="btn_div" class="btn" href="#!">% </a></td>
+                  </tr>
+                  <tr>
+                        <td><a id="btn_7" class="btn" href="#!">7</a></td>
+                        <td><a id="btn_8" class="btn" href="#!">8</a></td>
+                        <td><a id="btn_9" class="btn" href="#!">9</a></td>
+                        <td><a id="btn_por" class="btn" href="#!">X</a></td>
+                  </tr>
+                  <tr>
+                        <td><a id="btn_4" class="btn" href="#!">4</a></td>
+                        <td><a id="btn_5" class="btn" href="#!">5</a></td>
+                        <td><a id="btn_6" class="btn" href="#!">6</a></td>
+                        <td><a id="btn_menos" class="btn" href="#!">-</a></td>
+                  </tr>
+                  <tr>
+                        <td><a id="btn_1" class="btn" href="#!">1</a></td>
+                        <td><a id="btn_2" class="btn" href="#!">2</a></td>
+                        <td><a id="btn_3" class="btn" href="#!">3</a></td>
+                        <td><a id="btn_mas" class="btn" href="#!">+</a></td>
+                  </tr> 
+                  <tr>
+                        <td><a id="btn_0" class="btn" href="#!">0</a></td>
+                        <td><a id="btn_punto" class="btn" href="#!">.</a></td>
+                        <td><a id="btn_00" class="btn" href="#!">00</a></td>
+                        <td><a id="btn_igual" class="btn" href="#!">=</a></td>
+                  </tr>
+             
+              </tbody>
+          </table>
+        </fieldset>
+        </div>
+      </div>
+    </div>
+
+    {% include 'snipets/footer.html'%}
+    {{block.super}}
+
+{%endblock body%}

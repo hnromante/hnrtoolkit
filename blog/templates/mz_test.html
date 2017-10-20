@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body %}
+    {% include 'snipets/navbar.html' %}
+
+    <div class="container">
+        <h2>COLORS</h2>
+        <div class="red white-text">Cambiando el color del teo sin </div>
+        <div class="card-panel #43a047 green darken-1 white-text">This is a card panel with a teal lighten-2 class</div>
+        <div class="card-panel #757575 grey darken-1 white-text" >Smoke </div>
+        <div class="card-panel grey darken-2  orange-text">Other Smoke </div>
+        <hr>
+        <h2>Botones</h2>
+        <div class="btn">Un Boton</div>
+        <div class="btn waves-effect waves-ligh">Dos Boton</div>
+        <div class="btn btn-large waves-effect waves-ligh">Tres Boton</div>
+        <div class="btn waves-effect waves-ligh red">4 Boton</div>
+        <div class="btn waves-effect waves-ligh purple white-text">5 Purple</div>
+        <div class="btn waves-effect waves-ligh black-text yellow disabled">5 Disabled</div>
+        <div class="btn waves-effect white-text orange lighten-1"><i class="small material-icons">edit</i>Editar</div>
+        <div class="btn waves-effect white-text red darken-1"><i class="large material-icons">delete</i>Borrar</div>
+        <hr>
+        <div class="btn waves-effect waves-ligh red"><i class="material-icons left">cloud</i>Nube</div>
+        <div class="btn btn-large waves-effect waves-ligh red lighten-3 white-text"><i class="large material-icons center">alarm_add</i></div>
+        <h2>FLaoting buttons</h2>
+        <div class="btn-floating waves-effect blue btn-large"><i class="material-icons">add</i></div>
+        <div class="btn-floating btn-large waves-effect green lighten-1 white-text "><i class="large material-icons">alarm_add</i></div>
+        <div class="btn-floating orange btn-large white-text"><i class="material-icons">edit</i></div>
+        <div class="btn-floating grey darken-2 btn-large white-text"> <i class="large material-icons">smoking_rooms</i></div>
+        <div class="btn-floating red darken-21 btn-large white-text"> <i class="large material-icons">delete</i></div>
+        
+        <h3>Fixed FLoating Butttons</h3>
+        <a href="#" class="waves-effect waves-teal btn-flat">Boton vacio</a>
+        
+        <hr>
+        <h2>HELPERS</h2>
+        <div class="left-align"><p>LEFT ALIGN</p></div>
+        <div class="center-align"><p>CENTER ALIGN</p></div>
+        <div class="right-align"><p>RIGHT ALIGN</p></div>
+        <hr>
+        <h2>FLOATS</h2>
+        <div class="left">Float Left</div>
+        <div class="right">Float Right</div>
+        <h3></h3>
+        <div class="clearfix">clear fix</div>
+        <h2>ESCONDER CONTENIDO</h2>
+        <div class="hide-on-small-only">Hidden for small devices only</div>
+        <div class="hide-on-med-only">Hidden for med only</div>
+        <div class="hide-on-med-and-down">Hidden for med and down only</div>
+        <div class="hide-on-large-only">Hidden for large devices only</div>
+        <div><p class="truncate">Truncate texto - poner vista previa + (...){% lorem 2 %}</p></div>
+        <hr>
+
+        <h2>EFECTOS</h2>
+        <div class="card-panel hoverable">Contenido hoverable</div>
+        <div class="card-panel green  z-depth-1">Shadow 1</div>
+        <div class="card-panel green  z-depth-2">Shadow 2</div>
+        <div class="card-panel green  z-depth-3">Shadow 3</div>
+        <div class="card-panel green  z-depth-4">Shadow 4</div>
+        <div class="card-panel blue pulse white-text">Efecto pulse</div>
+        <h3>Efectos de texto e imagenes responsive</h3>
+        <div class="row">
+            <div class="col s5"></div>
+            <div class="col s2">
+               <img  src="https://screenshots.firefoxusercontent.com/images/78828735-c015-45c2-8071-55529f040714.png" class="responsive-img circle">
+            
+            </div>
+            <div class="col s5"></div>
+        </div>
+       
+        <p class="flow-text">TEXTO FLUIDO {% lorem 1 %}</p>
+        <div class="fixed-action-btn">
+            <a href="#" class="btn-floating"><i class="large material-icons">add</i></a>
+            <ul>
+                <li><a href="#" class="btn-floating yellow black-text btn-large"><i class="material-icons">format_quote</i></a></li>
+                <li><a href="#" class="btn-floating  blue white-text btn-large"><i class="large material-icons">publish</i></a></li>
+                <li><a href="#" class="btn-floating orange white-text btn-large"><i class="large material-icons">attach_files</i></a></li>
+                <li><a href="#" class="btn-floating red white-text btn-large"><i class="large material-icons">delete</i></a></li>
+            </ul>
+        </div>
+
+        <!--DROPDOWN -->
+
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#">SubItem 1</a></li>
+            <li><a href="#">SubItem 2</a></li>
+            <li class="divider"></li>
+            <li><a href="#">SubItem 3</a></li>
+        </ul>
+        <!-- NavBar asociado -->
+        <nav>
+            <div class="nav-wrapper blue lighten-2">
+                <a href="#" class="brand-logo left">Logo</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+                    <li><a href="#">Item1</a></li>
+                    <li><a href="#">Item2</a></li>
+                    <li><a class="dropdown-button" data-activates="dropdown1" href="#">Item3 <i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="#">Item4</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <h2>Iconos y botones en la navegacion</h2>
+        
+        <nav>
+                <div class="nav-wrapper RED darken-2">
+                    <a href="#" class="brand-logo left">Logo</a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="#">Buscar <i class="material-icons right">search</i></a></li>
+                        <li><a href="#">Refresh <i class="material-icons right">refresh</i></a></li>
+                        <li><a class="dropdown-button" data-activates="dropdown1" href="#">Item3 <i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="#" class="btn waves-effect waves-light grey">Boton</a></li>
+                    </ul>
+                </div>
+        </nav>
+
+    </div>
+    {% include 'snipets/footer.html' %}
+    {{ block.super }}
+    
+{% endblock body %}
+    

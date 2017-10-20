@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+
+
+<link rel="stylesheet" href="{% static 'blog/css/pweb_jquery3.css' %}">
+<script src="{% static 'blog/js/pweb_jquery3.js' %}"> type='text/javascript'</script>
+{% endblock head %}
+
+{% block body %}
+{% include "snipets/navbar.html" %}
+
+
+<div class="container">
+  <div class="row">
+      <div class="col l12 card-panel red white-text"><h4>Agregar y quitar estilos</h4></div>
+    <div class="col s12 m4 l6">
+      <button id="btn_1" class="btn btn-large red waves" type="submit" name="action">Agregar estilo
+          <i class="material-icons right">send</i>
+      </button>
+      
+      <button id="btn_2" class="btn btn-large red lighten-1 waves" type="submit" name="action">Remover estilo
+          <i class="material-icons right">send</i>
+      </button>
+    </div>
+    <div class="col s12 m4 l6">
+        
+        <a class="vinculo" href="#!">Vinculo 1</a>
+        <br>
+        <a class="vinculo" href="#!">Vinculo 2</a>
+        <br>
+        <a class="vinculo" href="#!">Vinculo 3</a>
+        <br>
+        <a class="vinculo" href="#!">Vinculo 4</a>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col l12 card-panel blue white-text">
+        <h4>Mostrar y Ocultar Formulario</h4>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col l12 offset-1">
+            <input class="btn btn-small" id="btn_cargarForm" type="button" value="Cargar formulario">
+            <input class="btn" id="btn_quitarForm" type="button" value="Quitar formulario">
+            <input class="btn" id="btn_moverForm" type="button" value="Copiar Formulario">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l6">
+            <div id="carga">
+                
+            </div>
+        </div>
+        <div class="col l6">
+                <div id="destino">
+                    
+                </div>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col l12 card-panel green white-text"><h4>Agrandar imagen mousemove()</h4></div>
+        <div class="col l6 ">
+            <img class="image-responsive" id="paisaje" src="{% static 'blog/img/pweb/paisaje.png' %}" alt="">
+        </div>
+    </div>
+    <div class="row">
+            <div class="col l12 card-panel purple white-text"><h4>Agregar items a una lista</h4></div>
+    </div>
+    <div class="row">
+            <div class="col s12 m4 l12">
+                <form action="">
+                    <fieldset>
+                        <legend><p>Agregar y eliminar vinculos</p></legend>
+                            <div class="input-field col s12 l6">
+                                <input type="text" id="tf_nombre" class="validate">
+                                <label for="tf_nombre">Nombre</label>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input type="text" id="tf_url" class="validate">
+                                <label for="tf_url">URL</label>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                    <input class="btn purple lighten-1" value="agregar"type="button" id="btn_agregar" class="validate">   
+                            </div>
+                    </fieldset>
+                </form>
+                <h4>Vinculos</h4>
+                
+                <ul id="ul_lista" class="collection with-header">
+                    <li class="collection-item"><div><a href="#!" >Google</a><a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div></li>
+                    <li class="collection-item"><div><a href="#!" >Facebook</a><a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div></li>
+                    <li class="collection-item"><div><a href="#!" >Inacap</a><a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div></li>
+                    <li class="collection-item"><div><a href="#!" >Reddit</a><a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div></li>
+                </ul>
+    
+                </div>
+                <div class="col l4 offset-l4">
+                        <input type="button" value="Eliminar todos" id="btn_eliminar" class="btn red">
+                </div>
+            </div>
+</div>
+
+
+
+
+{{ block.super }}
+
+{% include 'snipets/footer.html' %}
+{% endblock body %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+
+<script src="{% static 'blog/js/ejemplo1.js' %}"> type='text/javascript'</script>
+
+{% endblock head %}
+
+{% block body %}
+{% include "snipets/navbar.html" %}
+
+<div class="container">
+    <h2>Practica con Jquery</h2>
+
+
+<hr>
+<input type="button" id="btn1" name="btn1" value="Formatear Parrafo">
+<input type="button" id="btn2" name="btn2" value="Formatear Parrafo">
+<input type="button" id="btn3" name="btn3" value="Formatear Parrafo">
+<input type="button" id="btn4" name="btn4" value="Formatear DIV">
+
+
+<h4>Ejemplos muy basicos de la funcionalidad de JQUERY</h4>
+<p class="text-fluid" id="parrafo1"> {% lorem 2 %}</p>
+<br>
+<a class="vinculo" href="http://www.inacap.cl">Inacap.cl</a>
+<br>
+<a class="vinculo" href="http://www.emol.cl">Emol</a>
+<br>
+<a class="vinculo" href="http://www.reddit.com">Reddit</a>
+<br>
+<a  class="vinculo" href="http://www.inacap.cl">Inacap.cl</a>
+<div id="cuadro1">{% lorem 1 %}</div>
+</div>
+
+<div class="container">
+    <hr>
+    <input type="button" value="Modificar el Titulo H2" id="btn5" name="btn5">
+    <input type="button" value="Agregar texto a un parrafo" id="btn6" name="btn6">
+    <input type="button" value="Quitar la mitad del texto " id="btn7" name="btn7">
+    <input type="button" value="Reemplazar los textos" id="btn8" name="btn8">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4 l6 ">
+                <h2 id="h2-1">Titulo IZ</h2>
+        </div>
+        <div class="col s12 m4 l6">
+                <h2 id="h2-2"> Titulo DR</h2>
+        </div>
+      </div>
+    </div>
+    <p id="parrafo2">{% lorem 1 %}</p>
+</div>
+<div class="container">
+        <hr>
+
+
+          <div class="row">
+            <div class="col s12 m4 l6 ">
+                    <input class="btn green" type="button" value="Cambiar a casilla de password" id="btn9" name="btn9">
+                    <input class="btn purple" type="button" value="Aplicar Placeholder" id="btn10" name="btn10">
+                    <input class="btn blue" type="button" value="Cambiar la casilla de fecha" id="btn11" name="btn11">
+                    <input class="btn red" type="button" value="APlicar Max-length" id="btn12" name="btn12">
+                   
+            </div>
+            <div class="col s12 m4 l6">
+                    <input type="text" name="name" id="txt_1">
+            </div>
+          </div>
+
+    </div>
+
+{{ block.super }}
+{% include  'snipets/footer.html'%} 
+{% endblock body %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+
+<script src="{% static 'blog/js/ejemplo2.js' %}"> type='text/javascript'</script>
+
+{% endblock head %}
+
+{% block body %}
+{% include "snipets/navbar.html" %}
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m4 l6">
+      <input class="btn red" type="button" value="Ocultar Fotografia" name="btn1" id="btn1">
+      <input class="btn white black-text" type="button" value="Mostrar FOtografia" name="btn2" id="btn2">
+      <input class="btn blue" type="button" value="Desaparecer FOtografia" name="btn3" id="btn3">
+      <input class="btn purple" type="button" value="Aparecer Fotografia" name="btn4" id="btn4">
+      <input class="btn yellow black-text" type="button" value="Aclarar Fotografia" name="btn5" id="btn5">
+      <input class="btn blue lighten-2" type="button" value="Oscurecer Fotografia" name="btn6" id="btn6">
+    </div>
+
+    <div class="col s12 m4 l6">
+            <img class="responsive-img" id="kappa" src="{% static 'blog/img/kappa.png' %}" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+{{ block.super }}
+
+{% include 'snipets/footer.html' %}
+{% endblock body %}

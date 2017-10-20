@@ -1,0 +1,146 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head %}
+  
+<script src="{% static 'blog/js/index.js' %}"> type='text/javascript'</script>
+
+{% endblock head %}
+    
+{% block body %}
+{% include "snipets/navbar.html" %}
+
+
+  <body>
+
+    <main>
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6 l6">
+
+                  <fieldset >
+                    <legend>Registro de venta</legend>
+                    <form action="">
+                      <div class="input-field col s12 l6">
+                        <input type="number" min="0" max="999999999" id="tf_numero" class="validate">
+                        <label for="tf_nombre">Numero</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input type="text" id="tf_cliente" class="validate">
+                        <label for="tf_cliente">Cliente</label>
+                      </div>
+                      <div class="input-field col s12 l4">
+                        <input type="number" id="tf_cantidad" min="0" max="9999" class="validate">
+                        <label for="email">Cantidad</label>
+                      </div>
+                          <div class='input-field col s12'>
+                              <select id='cbo_documento'>
+                                <option value='boleta'>Boleta</option>
+                                <option value='factura'>Factura</option>
+                              </select>
+                              <label>Documento</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <select id="cb_est">
+                                  <option value='entrante'>Entrante</option>
+                                  <option value='saliente'>Saliente</option>
+                                  
+                                </select>
+                                <label>Entra o sale</label>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input type="number" min="1" max="999999999" id="tf_neto" class="validate">
+                                <label for="tf_neto">Neto</label>
+                            </div>
+
+                            <div id="btn_registrar" class="btn waves-effect waves-ligh red white-text right">Registrar</div>
+                    </form>
+                  </fieldset>
+                
+            </div>
+            <div class="col s12 m6 l6">
+                
+                    <fieldset >
+                      <legend>Detalle de Productos</legend>
+                      <form action="">
+                        <table id="tbl_detalle_producto">
+
+                            <tr>
+                              <th> </th>
+                              <th> Codigo</th>
+                              <th> Tipo</th>
+                              <th> Stock</th>
+                            </tr>
+          
+                         
+                        </table>
+                        <div id="btn_generar" class="btn waves-effect waves-ligh red white-text right">Generar</div>
+                      </form>
+                    </fieldset>
+                  
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+
+              <div class="col s12 m12 l6 card-panel center red darken-2 white-text">
+                Listado de ventas
+              </div>
+
+              <div class="col s12 m12 l4 offset-l2 card-panel center red darken-2 white-text">
+                Listado de Productos cliente 
+              </div>
+
+          </div>
+          <div class="row">
+            <div class="col s12 m12 l6">
+              <table id="tbl_ventas" class="bordered">
+                <tr>
+                  <th>Numero</th>
+                  <th >Cliente</th>
+                  <th>Productos</th>
+                  <th>Documento</th>
+                  <th >Neto</th>
+                  <th>Total</th>
+                  <th>E/S</th>
+                </tr>
+              </table>
+            </div>
+            <div class="col s12 m12 l4 offset-l2">
+                <table id="tbl_detalle_pro" class="bordered">
+                    <tr>
+                      <th>Codigo</th>
+                      <th>Tipo</th>
+                      <th>Stock</th>
+                    </tr>
+                </table>
+            </div>
+          </div>
+        </div>
+
+
+    </main>
+    <footer class="page-footer red darken-2">
+     
+      <div class="footer-copyright">
+        <div class="container">
+          © Hugo N Romante - oct 2017
+        </div>
+      </div>
+    </footer>
+
+   <!-- Script para activar navbar y COMBOBOX -->
+    <script>
+      $("document").ready(function(){
+        $(".button-collapse").sideNav();
+      });
+      $(document).ready(function() {
+        $('select').material_select();
+    });
+    </script>
+
+{{block.super}}
+
+{% endblock body %}

@@ -1,0 +1,21 @@
+body {
+
+    color: white;
+    background: white;
+}
+legend{
+    color: black;
+}
+
+table {
+    color: black;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
