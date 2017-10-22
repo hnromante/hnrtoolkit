@@ -13,19 +13,34 @@
 
 <div class="container">
   <div class="row">
-    <div class="col s12 m4 l6">
-      <input class="btn red" type="button" value="Ocultar Fotografia" name="btn1" id="btn1">
-      <input class="btn white black-text" type="button" value="Mostrar FOtografia" name="btn2" id="btn2">
-      <input class="btn blue" type="button" value="Desaparecer FOtografia" name="btn3" id="btn3">
-      <input class="btn purple" type="button" value="Aparecer Fotografia" name="btn4" id="btn4">
-      <input class="btn yellow black-text" type="button" value="Aclarar Fotografia" name="btn5" id="btn5">
-      <input class="btn blue lighten-2" type="button" value="Oscurecer Fotografia" name="btn6" id="btn6">
+    <div class="col s12 m6 l6">
+      <table class="responsive-table">
+        <tbody>
+          <tr>
+            <td><input class="btn red " type="button" value="Hide " name="btn1" id="btn1"></td>
+            <td><input class="btn white black-text" type="button" value="Mostrar " name="btn2" id="btn2"></td>
+
+          </tr>
+          <tr>
+            <td><input class="btn blue" type="button" value="Fade " name="btn3" id="btn3"></td>
+            <td><input class="btn purple" type="button" value="Aparecer " name="btn4" id="btn4"></td>
+
+          </tr>
+          <tr>
+            <td><input class="btn yellow black-text" type="button" value="Aclarar " name="btn5" id="btn5"></td>
+            <td><input class="btn blue lighten-2" type="button" value="Oscurecer " name="btn6" id="btn6"></td>
+
+          </tr>
+        </tbody>
+      </table>
+
     </div>
 
-    <div class="col s12 m4 l6">
+    <div class="col s12 m6 l6">
             <img class="responsive-img" id="kappa" src="{% static 'blog/img/kappa.png' %}" alt="">
     </div>
   </div>
+  <div class="row"><div class="col"><a href="{% url 'home_blog' %}"><i class="material-icons tiny">arrow_back</i>OK</a></div></div>
 </div>
 
 

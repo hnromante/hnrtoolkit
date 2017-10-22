@@ -1,63 +1,98 @@
-$(document).ready(function(e){
-        
-    $("#paisaje").attr("width",400);
-    $("#paisaje").attr("width",200);
+ $(document).ready(function(e){
 
-    $("#btn_1").click(function(e){
-        $('a').addClass("vinculo");    
-    });
 
-    $("#btn_2").click(function(e){
-        $('a').removeClass("vinculo");    
-    });
-
-    $("#btn_cargarForm").click(function(e){
-        var htmlForm = "<form action=''><div class='input-field col s12 l6'><input type='text' id='first_name' class='validate'><label for='first_name'>Campo 1</label></div><div class='input-field col s12 l6'><input type='text' id='last_name' class='validate'><label for='last_name'>Campo 2</label></div><div class='input-field col s12'><input type='email' id='email' class='validate'><label for='email' data-error='wrong' data-success='right'>Campo 3</label></div><div class='input-field col s12'><textarea id='textarea1' class='materialize-textarea'></textarea><label for='textarea1'>Textarea</label></div></form> ";
-        $('#carga').html(htmlForm);
+    $(".col").mouseout(function(){
+        $(".col").removeClass("red");
+        $(".col").removeClass("green");
     });
     
-    $("#btn_quitarForm").click(function(e){
-        $('#carga').html("");
-
-    });
-
-    $("#btn_moverForm").click(function(e){
-        var htmlForm = $("#carga").html();
-        $('#destino').html(htmlForm);
-
-    });
-
-    $("#paisaje").mousemove(function(e){
-        var ancho =  $("#paisaje").attr("width");
-        var alto = $("#paisaje").attr("height");
-
-        ancho++;
-        alto++;
-
-        $("#paisaje").attr("width",ancho);
-        $("#paisaje").attr("height",alto);
-    });
-
-    $("#paisaje").mouseout(function(e){
-        
-        $("#paisaje").attr("width",400);
-        $("#paisaje").attr("width",200);
-    });
-
-    $("#btn_agregar").click(function(e){
-        var nombre = $("#tf_nombre").val();
-        var url = $("#tf_url").val();
-     
-
-        if (nombre.length>0 && url.length>0){
-        
-            $("#ul_lista").prepend("<li class='collection-item'><div><a href='"+url+"'>"+ nombre +"</a><a href='#!' class='secondary-content'><i class='material-icons'>delete</i></a></div></li>");
-        
+    $("#op1").mouseover(function(){
+        if(!"Hola"){
+            $("#op1").addClass(" green");
+            $("#op1").attr("title","!'Hola' evalua VERDADERO");
         }else{
-            alert("Hay campos vacios");
-        }
-        
+            $("#op1").addClass(" red");
+            $("#op1").attr("title","!'Hola' evalua FALSO");
+        };
+
     });
-    
+
+    $("#op2").mouseover(function(){
+        if(!""){
+            $("#op2").addClass(" green");
+            $("#op2").attr("title","!'' evalua VERDADERO");
+        }else{
+            $("#op2").addClass(" red");
+            $("#op2").attr("title","!'' evalua FALSO");
+        };
+
+    });
+
+    $("#op3").mouseover(function(){
+        if(!null){
+            $("#op3").addClass(" green");
+            $("#op3").attr("title","!null evalua VERDADERO");
+        }else{
+            $("#op3").addClass(" red");
+            $("#op3").attr("title","!null evalua FALSO");
+        };
+    });
+
+    $("#op4").mouseover(function(){
+        if(!0){
+            $("#op4").addClass(" green");
+            $("#op4").attr("title","!0 evalua VERDADERO");
+        }else{
+            $("#op4").addClass(" red");
+            $("#op4").attr("title","!0 evalua FALSO");
+        };
+
+    });
+
+    $("#op5").mouseover(function(){
+        if(!-1){
+            $("#op5").addClass(" green");
+            $("#op5").attr("title","!-1 evalua VERDADERO");
+        }else{
+            $("#op5").addClass(" red");
+            $("#op5").attr("title","!-1 evalua FALSO");
+        };
+
+    });
+
+    $("#op6").mouseover(function(){
+        if(!NaN){
+            $("#op6").addClass(" green");
+            $("#op6").attr("title","!NaN evalua VERDADERO");
+        }else{
+            $("#op6").addClass(" red");
+            $("#op6").attr("title","!NaN evalua FALSO");
+        };
+
+    });
+
+    $("#op7").mouseover(function(){
+        if(null == undefined){
+            $("#op7").addClass(" green");
+            $("#op7").attr("title","!null == undefined evalua VERDADERO");
+        }else{
+            $("#op7").addClass(" red");
+            $("#op7").attr("title","!null == undefined evalua FALSO");
+        };
+
+    });
+
+
+    $("#op8").mouseover(function(){
+        if(!NaN == NaN){
+            $("#op8").addClass(" green");
+            $("#op8").attr("title","wtf?");
+        }else{
+            $("#op8").addClass(" red");
+            $("#op8").attr("title","wtf?");
+        };
+
+    });
+
 
 });
