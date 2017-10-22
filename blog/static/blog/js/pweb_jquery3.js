@@ -1,5 +1,5 @@
  $(document).ready(function(e){
-
+    $(".col s6 m3 l3").addClass("center-align")
 
     $(".col").mouseout(function(){
         $(".col").removeClass("red");
