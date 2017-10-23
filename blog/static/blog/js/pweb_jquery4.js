@@ -1,92 +1,102 @@
 //Archivo Javascript galeria de imagenes
 
 $(document).ready(function(e){
+    var tf_num = $("#tf_num");
+    var tf_fact = $("#tf_fact");
+    var tf_alpha = $("#tf_alpha");
+    var carta1 = $("#carta1");
+    var carta2 = $("#carta2");
+    var carta3 = $("#carta3");
+    var display1 = $("#display1");
+    var display2 = $("#display2");
+    var display3 = $("#display3");
 
-    $(".fotito").mouseover (function(e){
-        var tit =  $(this).attr("title");
-        $("#cargar_titulo").text(tit);
-        var url = $(this).attr("src");
-        
-        var foto = "<img src='"+url+"' alt='' id='fotoAmpliada'>";
-        $("#cargar_imagen").html(foto);
-    });
-    //Recuperamos la informacion del primer formulario
-    $("#btn_agregar").click(function(e) {
-        var rut = $("#tf_rut").val();
-        var nom = $("#tf_nombre").val();
-        var ape = $("#tf_apellido").val();
-        var email = $("#tf_email").val();
-        var carrera = $("#tf_carrera").val();
-        var promedio = $("#tf_promedio").val();
-        console.log(email);
-        //Validacion de campos
-        if(rut.length == 0){
-            alert('Digite el Rut!');
-            $("#tf_rut").focus();
-            return;
-        }
-
-        if(nom.length == 0){
-            alert('Digite el Nombre!');
-            $("#tf_nombre").focus();
-            return;
-        }
-
-        if(ape.length == 0){
-            alert('Escriba el Apellido');
-            $("#tf_apellido").focus();
-            return;
-        }
-        if(email.length == 0){
-            alert('Escriba el Email');
-            $("#tf_email").focus();
-            return;
-        }
-
-        if(carrera.length == 0){
-            alert('Escriba el nombre de la carrera');
-            $("#tf_carrera").focus();
-            return;
-        }
-
-        //Pasar los datos al sgundo formulario
-
-        $("#tf_rut2").val(rut);
-        $("#tf_rut2").focus();
-        $("#tf_nombre2").val(nom);
-        $("#tf_rut2").focus();
-        $("#tf_apellido2").val(ape);
-        $("#tf_rut2").focus();
-        $("#tf_email2").val(email);
-        $("#tf_rut2").focus();
-        $("#tf_carrera2").val(carrera);
-        $("#tf_rut2").focus();
-        $("#tf_promedio").val(promedio +"");
-        $("#tf_rut2").focus();
-
-
-    });
     
-    $("#btn_confirmar").click(function(e){
+    function esPar(num){
+        var correcto = false;
+        if(num % 2 == 0){
+            correcto = true;
+            return correcto;
+        }else
+        return correcto;
+    }
+    //console.log(esPar(3));
 
-        var rut = $("#tf_rut2").val();
-        var nom = $("#tf_nombre2").val();
-        var ape = $("#tf_apellido2").val();
-        var email = $("#tf_email2").val();
-        var carr = $("#tf_carrera2").val();
-        var pro = $("#tf_promedio").val();
+    function factorial(num){
+        var aux = 1;
+        if(num < 0 ){
+            alert("El numero deber ser mayor que 0!");
 
+        }else{
+            for (var i = 1; i <= num ; i++){
+                aux = aux*i;
+            }
+            return aux;
+        }
+    }
+    //console.log(factorial(5));
+    
+    function alpha(str){
+        var str_arr = str.split('');
+        for (var i = 0; i < str_arr.length; i++){
+            if(str_arr[i] == 'a' || str_arr[i] == 'A'){
+                str_arr[i] = '1';
+            }else if(str_arr[i] == 'e' || str_arr[i] == 'E'){
+                str_arr[i] = '2';
+            }
+            else if(str_arr[i] == 'i'|| str_arr[i] == 'I'){
+                str_arr[i] = '3';
+            }
+            else if(str_arr[i] == 'o' || str_arr[i] == 'O'){
+                str_arr[i] = '4';
+            }
+            else if(str_arr[i] == 'u' || str_arr[i] == 'U'){
+                str_arr[i] = '5'; 
+            }
+        }
 
+        return str_arr.join("");
+    }
+    //console.log(alpha("Hola Mundo"));
+   
+    tf_num.keyup(function(){
 
-        $("#tf_rut2").val("");
-        $("#tf_nombre2").val("");
-        $("#tf_apellido2").val("");
-        $("#tf_email2").val("");
-        $("#tf_carrera2").val("");
-        $("#tf_promedio").val("");
+        if(esPar(Number(tf_num.val()))){
+            console.log(tf_num.val() + " ES PAR");
+            carta1.removeClass(" yellow")
+            carta1.addClass("green");
+            display1.html(tf_num.val() + " es par ");
+        }else{
+            console.log(tf_num.val() + " NO ES PAR");
+            carta1.removeClass(" green")
+            carta1.addClass("yellow");
+            display1.html(tf_num.val()+ " no es par ");
+        }
+
+        if(tf_num.val() == ""){
+            carta1.removeClass("yellow");
+            carta1.removeClass("green");
+            carta1.addClass("white");
+            display1.html("es par?");
+        }
+        
+        
+    });
+
+    tf_fact.keyup(function(){
+        display2.html(factorial(tf_fact.val()));
+
+        if(tf_fact.val() == ""){
+            display2.html("!factorial")
+        }
 
     });
 
+    tf_alpha.keyup(function(){
+        display3.html(alpha(tf_alpha.val()));
+    });
 
-
+    if(tf_alpha.val() == ""){
+        display3.html("l4 q52 s21");
+    }
 });

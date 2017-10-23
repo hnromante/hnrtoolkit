@@ -10,59 +10,42 @@
 {% block body %}
 {% include "snipets/navbar.html" %}
 
-<header>
+
 <div class="container">
   <div class="row">
-    <div class="col s12 m4 l6">
-        <h3 class="text-fluid">Galeria de Imagenes</h3>
-    </div>
-  </div>
-</div>
-</header>
-
-<div id="main">
-
-    
-        <div class="row fila">
-            <div class="col s12 m6 l6 sec1">
-                <div class="row fila">
-                    <div class="col s12 m12 l6">
-                        <img src="{% static 'blog/img/pweb_jquery4/foto1.jpg' %}" title="Cavancha, Norte-Sur" alt="" class="responsive-img circle fotito"/>
-                    </div>
-                    <div class="col s12  m12  l6">
-                        <img src="{% static 'blog/img/pweb_jquery4/foto2.jpg' %}" title="Plaza Arturo Prat" alt="" class="responsive-img circle fotito"/>    
-                    </div>
-                </div>
-                <div class="row fila">
-                    <div class="col  s12  m12 l6"> 
-                        <img src="{% static 'blog/img/pweb_jquery4/foto3.jpg' %}" title="Puerto - Esmeralda" alt="" class="responsive-img circle fotito"/>
-                    </div>
-                    <div class="col s12 m12  l6">
-                        <img src="{% static 'blog/img/pweb_jquery4/foto4.jpg' %}" title="Cavancha, Sur-Norte" alt="" class="responsive-img circle fotito"/>    
-                    </div>
-                </div>
-                <div class="row fila">
-                    <div class="col s12 m12 l6">
-                        <img src="{% static 'blog/img/pweb_jquery4/foto5.jpg' %}" title="Termas No se Q" alt="" class="responsive-img circle fotito"/>
-                    </div>
-                    <div class="col s12 m12 l6">
-                        <img src="{% static 'blog/img/pweb_jquery4/foto6.jpg' %}" title="Cavancha, Noche" alt="" class="responsive-img circle fotito"/>    
-                    </div>
-                </div>
-            </div>   
-            <div class="col s12 m8 l6 sec2">
-                <h4 id="cargar_titulo"></h4>
-                <div id="cargar_imagen"></div>
+    <div class="col s12 m4 l4">
+        <div  id="carta1" class="card darken-1">
+            <div class="card-content grey-text">
+                <p id="display1" class="flow-text">es par?</p>
+            </div>
+            <div class="card-action">
+                    <input maxlength="22" type="text" name="tf_num" id="tf_num" placeholder="numero">
             </div>
         </div>
-    
-
+    </div> 
+    <div class="col s12 m4 l4">
+        <div id="carta2" class="card darken-1">
+            <div class="card-content grey-text">
+                <p id="display2" class="flow-text">!factorial</p>
+            </div>
+            <div class="card-action">
+                <input maxlength="22" type="text" name="tf_fact" id="tf_fact" placeholder="numero">
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4 l4">
+        <div id="carta13" class="card darken-1">
+            <div class="card-content grey-text">
+                <p id="display3" class="flow-text">l4 q52 s21</p>
+            </div>
+            <div class="card-action">
+                    <input maxlength="22" type="text" name="tf_alpha" id="tf_alpha" placeholder="lo que sea">
+        </div>
+    </div>
+    </div>
+    <a href="{% url 'home_blog' %}"><i class="material-icons tiny">arrow_left</i> ok</a>
+  </div>
 </div>
-
-
-
-
 {{ block.super }}
 
-{% include 'snipets/footer.html' %}
 {% endblock body %}

@@ -5,6 +5,10 @@
 
 <link rel="stylesheet" href="{% static 'blog/css/pweb_jquery3.css' %}">
 <script src="{% static 'blog/js/pweb_jquery3.js' %}"> type='text/javascript'</script>
+<style> .casilla{
+    height: 100px;    
+    font-size: 20px;
+} </style>
 {% endblock head %}
 
 {% block body %}
@@ -17,28 +21,28 @@
             </div>
     </div> 
     <div class="row z-depth-1 white-text">
-        <div id="op1" class="col s6 m3 l3 center-align">
+        <div id="op1" class="col s6 m3 l3 center-align casilla">
             !"Hola"
         </div>
-        <div id="op2" class="col s6 m3 l3 center-align ">
+        <div id="op2" class="col s6 m3 l3 center-align casilla ">
             !""
         </div>
-        <div id="op3" class="col s6 m3 l3 center-align ">
+        <div id="op3" class="col s6 m3 l3 center-align casilla ">
             !null
         </div>
-        <div id="op4" class="col s6 m3 l3 center-align">
+        <div id="op4" class="col s6 m3 l3 center-align casilla">
             !0
         </div>
-        <div id="op5" class="col s6 m3 l3 center-align">
+        <div id="op5" class="col s6 m3 l3 center-align casilla">
             !-1
         </div>
-        <div id="op6" class="col s6 m3 l3 center-align ">
+        <div id="op6" class="col s6 m3 l3 center-align casilla ">
             !NaN
         </div>
-        <div id="op7" class="col s6 m3 l3 center-align ">
+        <div id="op7" class="col s6 m3 l3 center-align casilla ">
             null == undefined
         </div>
-        <div id="op8" class="col s6 m3 l3 center-align">
+        <div id="op8" class="col s6 m3 l3 center-align casilla">
             NaN == NaN 
         </div>
         <div id="evalua" class="col 12 l12 m12 grey-text center align flow-text">
@@ -46,6 +50,7 @@
         </div>
     </div>
 </div>
+<div class="row"><div class="col"><a href="{% url 'home_blog' %}"><i class="material-icons tiny">arrow_back</i>OK</a></div></div>
 
 {{ block.super }}
 

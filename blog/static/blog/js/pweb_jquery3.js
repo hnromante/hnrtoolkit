@@ -21,10 +21,10 @@
     $("#op2").mouseover(function(){
         if(!""){
             $("#op2").addClass(" green");
-            $("#evalua").html("!'' evalua VERDADERO");
+            $("#evalua").html("!'' '' evalua VERDADERO");
         }else{
             $("#op2").addClass(" red");
-            $("#evalua").html("!'' evalua FALSO");
+            $("#evalua").html("!'' '' evalua FALSO");
         };
 
     });

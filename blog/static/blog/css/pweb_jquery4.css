@@ -1,36 +1,4 @@
-#main {
-    background-color: #dbd7d7;
-    border: 2px solid #A4A90B;
-   
-}
 body {
-    background-color: #9DDE86;
-}
-
-.fotito {
-    width: 300px;
-    height: 200px;
-    border: 1px solid green;
-    margin: 5px;
-}
-
-.fila   {
-    padding-top: 1%;
-}
-
-.sec1 {
-    width: 65%;
-    border-left: 1px solid green;
-    border-right: 1px solid green;
-
-
-}
-
-.sec2 {
-    width: 35%;
-}
-
-#fotoAmpliada {
-    width: 500px;
-    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration-color:grey; 
 }
