@@ -12,9 +12,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col align-center grey-text">
+        <p class="flow-text"><i class="material-icons">info</i> ejemplo de formulario basico con JQuery</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m4 l5">
             <form action="">
-                <div class="centered text-responsive"> <h5><i class="material-icons prefix">account_circle</i> Registro de Matricula</h5></div>
+                <div class="centered text-responsive"> <h5><i class="material-icons prefix">help</i> Papitas pal loro form</h5></div>
                 <div class="input-field col s12">
                     
                     <input type="text" id="tf_rut" class="validate">
@@ -41,89 +46,42 @@
                     <label for="email" data-error="wrong" data-success="right">Promedio</label>
                 </div> 
                 <div class="input-filed col s12 m12 l12">
-                        <div class="btn btn-large waves-effect waves-ligh green lighten-3 white-text" id="btn_agregar">Agregar</div>
+                        <div class="btn btn-large waves-effect waves-ligh green  white-text" id="btn_agregar">Agregar</div>
                 </div>
-
-
-    
-
-              
             </form>
         </div>
-        <div class="col s12 m6 l6">
-                <form action="">
-                    <div class="centered text-responsive"> <h5><i class="material-icons prefix">account_circle</i> Registro de Matricula</h5></div>
-                    <div class="input-field col s12">
-                        
-                        <input type="text" id="tf_rut2" class="validate" disabled>
-               
-                    </div>
-                  <div class="input-field col s12 l6">
-                    <input type="text" id="tf_nombre2" class="validate" disabled>
-                   
-                  </div>
-                  <div class="input-field col s12 l6">
-                    <input type="text" id="tf_apellido2" class="validate" disabled>
-                    
-                  </div>
-                  <div class="input-field col s12">
-                    <input type="email" id="tf_email2" class="validate" disabled>
-                   
-                  </div>
-                  <div class="input-field col s12 m6 l6">
-                        <input type="text" id="tf_carrera2" class="validate" disabled>
-                        
-                      </div>
-                    <div class="input-field col m6 l6">
-                        <input type="number" id="tf_promedio2" class="validate" disabled>
-                    </div> 
-                    <div class="input-filed col s12 m12 l12">
-                            <div class="btn btn-large waves-effect waves-ligh green lighten-3 white-text">Confirmar</div>
-                    </div>
-    
-    
-        
-    
-                  
-                </form>
-            </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12 m12 l12">
-            <table class="centered">
+        <div class="col s12 m8 l7">
+            <table id="tbl_dest" class="centered bordered">
                 <thead>
                     <tr>
-                        <th data-field="id">Name</th>
-                        <th data-field="name">Item Name</th>
-                        <th data-field="price">Item Price</th>
+                        <th data-field="rut">Rut</th>
+                        <th data-field="nom">Nombre</th>
+                        <th data-field="ape">Apellido</th>
+                        <th data-field="mail">Email</th>
+                        <th data-field="carr">Carrera</th>
+                        <th data-field="prom">Promedio</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                        <td>.87</td>
+                    
                     </tr>
                     <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                        <td>.76</td>
+                  
                     </tr>
                     <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td>.00</td>
+                      
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <a href="{% url 'home_blog' %}"><i class="material-icons tiny">arrow_left</i> ok</a>
 </div>
 
 
 
 {{ block.super }}
 
-{% include 'snipets/footer.html' %}
+
 {% endblock body %}

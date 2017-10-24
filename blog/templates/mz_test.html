@@ -5,6 +5,11 @@
     {% include 'snipets/navbar.html' %}
 
     <div class="container">
+        <div class="row">
+            <div class="col align-center grey-text">
+               <p class="flow-text"><i class="material-icons">info</i> Paleta ayuda memorias de materialize</p>
+            </div>
+        </div>
         <h2>COLORS</h2>
         <div class="red white-text">Cambiando el color del teo sin </div>
         <div class="card-panel #43a047 green darken-1 white-text">This is a card panel with a teal lighten-2 class</div>
@@ -116,9 +121,9 @@
                     </ul>
                 </div>
         </nav>
-
+        <div class="row"><div class="col"><a href="{% url 'home_blog' %}"><i class="material-icons tiny">arrow_back</i>OK</a></div></div>
     </div>
-    <div class="row"><div class="col"><a href="{% url 'home_blog' %}"><i class="material-icons tiny">arrow_back</i>OK</a></div></div>
+   
     {% include 'snipets/footer.html' %}
     {{ block.super }}
     

@@ -12,7 +12,11 @@
 
     
     <div class="container">
-        <div class="card-panel blue darken-1 center-align"><h3>JQuery</h3></div>
+      <div class="row">
+            <div class="col align-center grey-text">
+                <p class="flow-text"><i class="material-icons tiby">info</i> Este demo solo funciona con 2 valores a la vez.</p>
+            </div>
+      </div>
       <div class="row">
         <div class="col s8 m6 l4 offset-l4 offset-m3 " >
             <fieldset>
@@ -58,9 +62,10 @@
         </fieldset>
         </div>
       </div>
+      <a href="{% url 'home_blog' %}"><i class="material-icons tiny">arrow_left</i> ok</a>  
     </div>
+  
 
-    {% include 'snipets/footer.html'%}
     {{block.super}}
 
 {%endblock body%}

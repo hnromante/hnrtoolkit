@@ -94,9 +94,10 @@ $(document).ready(function(e){
 
     tf_alpha.keyup(function(){
         display3.html(alpha(tf_alpha.val()));
+        if(tf_alpha.val() == ""){
+            display3.html("l4 q52 s21");
+        }
     });
 
-    if(tf_alpha.val() == ""){
-        display3.html("l4 q52 s21");
-    }
+    
 });
