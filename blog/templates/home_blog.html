@@ -15,7 +15,7 @@
     </div>
     <div class="col s12 m8 l8 card-panel grey-text">
         <b>Hugo Núñez Romante, estudiante Analista Programador, San Vicente TT</b>
-        <p>Un pequeño espacio personal donde experimento con lo que aprendo y lo pongo a prueba live, antes de usarlo en producción. Desde librerias que me llamen la atención a servicios útilies para desarrollar.</p>
+        <p>Un pequeño espacio personal donde experimento con lo que aprendo y lo pongo a prueba live en un servidor, antes de usarlo en producción. Desde librerias que me llamen la atención a servicios útilies para desarrollar.</p>
         <br>
         <p>La presente aplicación está montada en heroku, desarrollada en <a href="https://www.python.org/">Python</a> con el framework <a href="https://www.djangoproject.com/">Django</a> para el backend y <a href="http://materializecss.com/">Materialize</a> + <a href="https://jquery.com/">Jquery </a> para la parte visual-front.
     </div>
@@ -71,8 +71,11 @@
 <hr>
 <div class="row">
         <div class="col align-center grey-text">
-            
-            <p class="flow-text"><i class="material-icons">info</i> La pagina está live desde el 22 de octubre, por lo tanto para darle algo de contenido por el momento, dejo algunos ejemplos de html+css+js funcionando en conjunto (sin backend).</p>
+                <p class="flow-text"><i class="material-icons">info</i> Para quien visite, la pagina está live desde el 22 de octubre,
+                asi que para que no se note pobreza...</p>
+        </div>
+        <div class="col center-align grey-text">
+            <p class="flow-text align-center">Practica con JQuery</p>
         </div>
     </div>
         <div class="row">
@@ -80,14 +83,14 @@
                     <div class="card hoverable small card-small">
                             <a href="{% url 'pweb-formgen' %}">
                                 <div class="card-image">
-                                    <img src="{% static 'blog/img/default.jpg' %}">
+                                    <img src="{% static 'blog/img/tn8.png' %}">
                                     
                                 </div>
                             </a>
                           <div class="card-content">
-                                <p class="flow-text">Generador de formularios</p>
+                                <p class="flow-text">Formulario Dinamico</p>
                                 <hr>
-                                <p class="truncate">JS + JQuery para manipular el DOM y formulario</p>
+                                <p class="truncate">Manipulacion DOM</p>
                           </div>
                     </div>
             </div>
@@ -95,7 +98,7 @@
                     <div class="card hoverable small card-small">
                             <a href="{% url 'pweb-calculadora' %}">
                                 <div class="card-image">
-                                    <img src= "{% static 'blog/img/thumnail_mz.png' %}">
+                                    <img src= "{% static 'blog/img/tn7.png' %}">
                                    
                                     
                                 </div>
@@ -112,14 +115,14 @@
                     <div class="card hoverable small card-small">
                             <a href="{% url 'mz-test' %}">
                                 <div class="card-image">
-                                    <img src="{% static 'blog/img/thumnail_mz.png' %}">
+                                    <img src="{% static 'blog/img/default.jpg' %}">
                                     
                                 </div>
                             </a>
                           <div class="card-content">
                                 <p class="flow-text">Ejemplos Materialize</p>
                                 <hr>
-                                <p>Controles basicos del framework front-end Materialize</p>
+                                <p>Paleta de controles basico MZ</p>
                           </div>
                     </div>
             </div>
@@ -127,12 +130,12 @@
                             <div class="card hoverable small card-small">
                                     <a href="{% url 'pweb-jquery5'  %}">
                                         <div class="card-image">
-                                            <img src="{% static 'blog/img/thumbnail5.png' %}">
+                                            <img src="{% static 'blog/img/tn5.png' %}">
                                             
                                         </div>
                                     </a>
                                   <div class="card-content">
-                                        <p class="flow-text">Ejemplo Jquery 5</p>
+                                        <p class="flow-text">Form básico</p>
                                         <hr>
                                         <p>Formularios y controles comunes</p>
                                   </div>
@@ -143,15 +146,15 @@
                             <div class="card hoverable small card-small">
                                     <a href="{% url 'pweb-jquery4'  %}">
                                         <div class="card-image">
-                                            <img src="{% static 'blog/img/thumbnail4.png' %}">
+                                            <img src="{% static 'blog/img/tn4.png' %}">
                                             
                                         </div>
                                     </a>
                                   <div class="card-content">
                                     
-                                    <p class="flow-text">Ejemplo Jquery 4</p>
+                                    <p class="flow-text">Evento .keyUp()</p>
                                     <hr>
-                                    <p>Galeria de imagenes</p>
+                                    <p>Evento Jquery en casillas</p>
                                   </div>
                             </div>
             </div>
@@ -159,15 +162,15 @@
                             <div class="card hoverable small card-small">
                                 <a href="{% url 'pweb-jquery3'  %}">
                                     <div class="card-image">
-                                        <img src="{% static 'blog/img/thumbnail3.png' %}">
+                                        <img src="{% static 'blog/img/tn3.png' %}">
                                     
                                     </div>
                                 </a>
                               <div class="card-content">
                                 
-                                <p class="flow-text">Ejemplo Jquery 3</p>
+                                <p class="flow-text">True or False</p>
                                 <hr>
-                                <p>Agregar Items a una lista</p>
+                                <p>Como evalua JS algunas expresiones</p>
                               </div>
                             </div>
                     </div>
@@ -175,15 +178,15 @@
                             <div class="card hoverable small card-small">
                                     <a href="{% url 'pweb-jquery2'  %}">
                                         <div class="card-image">
-                                            <img src="{% static 'blog/img/thumbnail2.png' %}">
+                                            <img src="{% static 'blog/img/tn2.png' %}">
                                             
                                         </div>
                                     </a>
                                   <div class="card-content">
                                     
-                                    <p class="flow-text">Ejemplo JQuery 2</p>
+                                    <p class="flow-text">Efectos fotos</p>
                                     <hr>
-                                    <p>Efectos basico imagenes</p>
+                                    <p>fade(), hide(), appear(), etc</p>
                                   </div>
                             </div>
             </div>
