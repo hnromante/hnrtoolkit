@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.conf.urls import url
 from django.contrib import admin
 from blog.views import (HomeBlogView, MzTestView, PwebJqueryView, PwebJquery2View, 
-PwebEj1View, PwebJquery3View, PwebJquery4View, PwebJquery5View,PwebCalculadora,PwebFormGen)
+PwebEj1View, PwebJquery3View, PwebJquery4View, PwebJquery5View,PwebCalculadora,PwebFormGen,CVView)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -34,6 +34,7 @@ urlpatterns = [
     url(r'^pweb-ej1/$', PwebEj1View.as_view(), name='pweb-ej1'),
     url(r'^pweb-calculadora/$', PwebCalculadora.as_view(), name='pweb-calculadora'),
     url(r'^pweb-formgen/$', PwebFormGen.as_view(), name='pweb-formgen'),
+    url(r'^cv/$', CVView.as_view(), name='cv'),
 ]
 
 

@@ -39,3 +39,7 @@ class PwebCalculadora(TemplateView):
 
 class PwebFormGen(TemplateView):
     template_name = "pweb_prueba2.html"
+
+
+class CVView(TemplateView):
+    template_name = "cv.html"
